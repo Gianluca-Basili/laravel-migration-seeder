@@ -16,9 +16,26 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                @foreach($trains as $train)
+                    <div class=col-12>
+                        {{$train->azienda}} - {{$train->codice_treno}}
+                        @if($train->data_partenza === '2023-07-27')
+                            in partenza il: {{$train->data_partenza}}
+                        @else 
+                            in partenza il: {{$train->data_partenza}}
+                        @endif
 
+                    </div>
+                    
+                @endforeach
+            </div>
+        </div>
+    </div>
   
-    </main>
+    
 
 </body>
 
