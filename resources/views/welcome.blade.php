@@ -22,12 +22,12 @@
                 @foreach($trains as $train)
                     <div class=col-12>
                         {{$train->azienda}} - {{$train->codice_treno}}
-                        @if($train->data_partenza === '2023-07-27')
-                            in partenza il: {{$train->data_partenza}}
-                        @else 
-                            in partenza il: {{$train->data_partenza}}
+                       @if($train->in_orario)
+                            si
+                        @else
+                            no
                         @endif
-
+                        
                     </div>
                     
                 @endforeach
